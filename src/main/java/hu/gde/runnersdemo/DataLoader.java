@@ -60,7 +60,7 @@ public class DataLoader implements CommandLineRunner {
 
         //harmadik futó hozzáadása
         RunnerEntity runnerEntity3 = new RunnerEntity();
-        runnerEntity3.setRunnerName("Géza");
+        runnerEntity3.setRunnerName("Gazsi");
         runnerEntity3.setAveragePace(260);
         runnerEntity3.setAge(28);
         

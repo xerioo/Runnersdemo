@@ -74,6 +74,28 @@
 			"response": []
 		},
 		{
+			"name": "getAverageAge",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/runner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"runner",
+						"averageage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "addLapTime",
 			"event": [
 				{

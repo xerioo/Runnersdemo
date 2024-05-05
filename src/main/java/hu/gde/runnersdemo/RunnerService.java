@@ -29,4 +29,13 @@ public class RunnerService {
             return -1.0;
         }
     }
+
+    public double getAverageAge() {
+        List<RunnerEntity> runners = runnerRepository.findAll();
+        int totalAge = 0;
+        for (RunnerEntity runner : runners) {
+            totalAge += runner.getAge();
+        }
+        return (double) totalAge / runners.size();
+    }
 }

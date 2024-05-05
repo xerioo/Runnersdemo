@@ -17,10 +17,15 @@ public class RunnerController {
     private RunnerRepository runnerRepository;
     @Autowired
     private LapTimeRepository lapTimeRepository;
+    @Autowired
+    private RunnerService runnerService;
+
     @GetMapping("/runners")
     public String getAllRunners(Model model) {
         List<RunnerEntity> runners = runnerRepository.findAll();
         model.addAttribute("runners", runners);
+        double averageAge = Math.round(runnerService.getAverageAge()*100.0)/100.0;
+        model.addAttribute("averageAge", averageAge);
         return "runners";
     }
 
