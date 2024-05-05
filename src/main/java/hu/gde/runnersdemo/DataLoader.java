@@ -1,4 +1,9 @@
 package hu.gde.runnersdemo;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -8,75 +13,49 @@ import org.springframework.stereotype.Component;
 public class DataLoader implements CommandLineRunner {
 
     private final RunnerRepository runnerRepository;
+    private final ShoeRepository shoeRepository;
 
     @Autowired
-    public DataLoader(RunnerRepository runnerRepository) {
+    public DataLoader(RunnerRepository runnerRepository, ShoeRepository shoeRepository) {
         this.runnerRepository = runnerRepository;
+        this.shoeRepository = shoeRepository;
     }
 
     @Override
     public void run(String... args) {
-        // create default runner entity
-        RunnerEntity runnerEntity = new RunnerEntity();
-        runnerEntity.setRunnerName("Tomi");
-        runnerEntity.setAveragePace(310);
-        runnerEntity.setAge(23);
-        // create default laptime entities and add them to the runner entity
-        LapTimeEntity laptime1 = new LapTimeEntity();
-        laptime1.setLapNumber(1);
-        laptime1.setTimeSeconds(120);
-        laptime1.setRunner(runnerEntity);
-        
-        LapTimeEntity laptime2 = new LapTimeEntity();
-        laptime2.setLapNumber(2);
-        laptime2.setTimeSeconds(110);
-        laptime2.setRunner(runnerEntity);
-        
-        runnerEntity.getLaptimes().add(laptime1);
-        runnerEntity.getLaptimes().add(laptime2);
-        
-        runnerRepository.save(runnerEntity);
-        
-        RunnerEntity runnerEntity2 = new RunnerEntity();
-        runnerEntity2.setRunnerName("Zsuzsi");
-        runnerEntity2.setAveragePace(290);
-        runnerEntity2.setAge(20);
-        
-        LapTimeEntity laptime3 = new LapTimeEntity();
-        laptime3.setLapNumber(1);
-        laptime3.setTimeSeconds(95);
-        laptime3.setRunner(runnerEntity2);
+        //creating shoes first
+        List<String> shoeNames = Arrays.asList("Nike Pegasus", "Adidas Ultraboost", "Brooks Ghost", "Saucony Triumph", 
+                                                    "Hoka Mach", "lululemon Blissfeel", "Asics Gel-Kayano", "Supersonic", 
+                                                    "ZoomX", "Endorphin Speed");
+        List<ShoeEntity> shoes = new ArrayList<>();
+        for (String shoeName : shoeNames) {
+            ShoeEntity shoeEntity = new ShoeEntity();
+            shoeEntity.setName(shoeName);
+            shoes.add(shoeRepository.save(shoeEntity));
+        }
+        //creating runners with random data
+        List<String> runnerNames = Arrays.asList("Tomi", "Zsuzsi", "Gazsi", "Forest", "Usain");
+        Random random = new Random();
+        for (String runnerName : runnerNames) {
+            RunnerEntity runnerEntity = new RunnerEntity();
+            runnerEntity.setRunnerName(runnerName);
+            runnerEntity.setAge(16 + random.nextInt(65));
+            runnerEntity.setAveragePace(200 + random.nextInt(150));
 
-        LapTimeEntity laptime4 = new LapTimeEntity();
-        laptime4.setLapNumber(2);
-        laptime4.setTimeSeconds(100);
-        laptime4.setRunner(runnerEntity2);
+            for (int i = 1; i <= 2; i++) {
+                LapTimeEntity lapTimeEntity = new LapTimeEntity();
+                lapTimeEntity.setLapNumber(i);
+                lapTimeEntity.setTimeSeconds(90 + random.nextInt(111));
+                lapTimeEntity.setRunner(runnerEntity);
+                runnerEntity.getLaptimes().add(lapTimeEntity);
+            }
 
-        runnerEntity2.getLaptimes().add(laptime3);
-        runnerEntity2.getLaptimes().add(laptime4);
+            ShoeEntity randomShoe = shoes.get(random.nextInt(shoes.size()));
+            runnerEntity.setShoe(randomShoe);
 
-        runnerRepository.save(runnerEntity2);
-        
+            runnerRepository.save(runnerEntity);
+        }
 
-        //harmadik futó hozzáadása
-        RunnerEntity runnerEntity3 = new RunnerEntity();
-        runnerEntity3.setRunnerName("Gazsi");
-        runnerEntity3.setAveragePace(260);
-        runnerEntity3.setAge(28);
-        
-        LapTimeEntity laptime5 = new LapTimeEntity();
-        laptime5.setLapNumber(1);
-        laptime5.setTimeSeconds(123);
-        laptime5.setRunner(runnerEntity3);
-
-        LapTimeEntity laptime6 = new LapTimeEntity();
-        laptime6.setLapNumber(2);
-        laptime6.setTimeSeconds(141);
-        laptime6.setRunner(runnerEntity3);
-
-        runnerEntity3.getLaptimes().add(laptime5);
-        runnerEntity3.getLaptimes().add(laptime6);
-        runnerRepository.save(runnerEntity3);
     }
 }
 

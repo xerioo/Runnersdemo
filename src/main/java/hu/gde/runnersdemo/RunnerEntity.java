@@ -16,7 +16,18 @@ public class RunnerEntity {
     @OneToMany(mappedBy = "runner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<LapTimeEntity> laptimes = new ArrayList<>();
     
-    
+    @ManyToOne
+    @JoinColumn(name = "shoe", referencedColumnName = "id")
+    private ShoeEntity shoe;
+
+    public ShoeEntity getShoe() {
+        return shoe;
+    }
+
+    public void setShoe(ShoeEntity shoe) {
+        this.shoe = shoe;
+    }
+
     public RunnerEntity() {
     }
     

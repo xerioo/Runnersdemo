@@ -15,19 +15,33 @@
             <th>Name</th>
             <th>Average Pace</th>
             <th>Age</th>
+            <th>Shoe</th>
             <th>Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="runner : ${runners}">
-            <td th:text="${runner.runnerId}"></td>
-            <td th:text="${runner.runnerName}"></td>
-            <td th:text="${runner.averagePace}"></td>
-            <td th:text="${runner.age}"></td>
+        <th:block th:each="runnerEntry, shoeName : ${runners}">
+            <tr>
+            <td th:text="${runnerEntry.key.runnerId}"></td>
+            <td th:text="${runnerEntry.key.runnerName}"></td>
+            <td th:text="${runnerEntry.key.averagePace}"></td>
+            <td th:text="${runnerEntry.key.age}"></td>
+            <td th:text="${runnerEntry.value}"></td>
+            <td>
+                <a th:href="@{/runner/{id}(id=${runnerEntry.key.runnerId})}" class="btn btn-primary">View</a>
+            </td>
+            </tr>
+        </th:block>
+<!--         <tr>
+            <td th:text="${runner.key.runnerId}"></td>
+            <td th:text="${runner.key.runnerName}"></td>
+            <td th:text="${runner.key.averagePace}"></td>
+            <td th:text="${runner.key.age}"></td>
+            <td th:text="${shoeName}"></td>
             <td>
                 <a th:href="@{/runner/{id}(id=${runner.runnerId})}" class="btn btn-primary">View</a>
             </td>
-        </tr>
+        </tr> -->
         </tbody>
     </table>
     <h3>Average age of the runners: <b th:text="${averageAge}"></b> years</h3>

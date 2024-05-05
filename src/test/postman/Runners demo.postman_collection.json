@@ -96,6 +96,28 @@
 			"response": []
 		},
 		{
+			"name": "changeRunnerShoe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/runners/1/shoe/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"runners",
+						"1",
+						"shoe",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "addLapTime",
 			"event": [
 				{
