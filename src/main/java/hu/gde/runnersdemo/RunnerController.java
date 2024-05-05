@@ -23,6 +23,14 @@ public class RunnerController {
     @Autowired
     private ShoeRepository shoeRepository;
 
+/*     @Autowired
+    public RunnerController(RunnerService runnerService) {
+        this.runnerService = runnerService;
+    } */
+
+    @Autowired
+    private RunnerRestController runnerRestController;
+
     @GetMapping("/runners")
     public String getAllRunners(Model model) {
         List<RunnerEntity> runners = runnerRepository.findAll();
@@ -32,8 +40,7 @@ public class RunnerController {
             runnerShoeNames.put(runner, shoeName);
         }
         model.addAttribute("runners", runnerShoeNames);
-        //model.addAttribute("runners", runners);
-        double averageAge = Math.round(runnerService.getAverageAge()*100.0)/100.0;
+        double averageAge = Math.round(runnerRestController.getAverageAge()*100.0)/100.0;
         model.addAttribute("averageAge", averageAge);
         return "runners";
     }
@@ -81,7 +88,7 @@ public class RunnerController {
         }
         return "redirect:/runner/" + id;
     }
-    @PutMapping("/runners/{runnerId}/shoe/{id}")
+    @PutMapping("/runner/{runnerId}/shoe/{id}")
     public RunnerEntity changeRunnerShoe(@PathVariable Long runnerId, @PathVariable Long id) {
         RunnerEntity runner = runnerRepository.findById(runnerId).orElse(null);
         ShoeEntity shoe = shoeRepository.findById(id).orElse(null);
@@ -93,5 +100,6 @@ public class RunnerController {
         return runnerRepository.save(runner);
     }
 
+ 
 }
 

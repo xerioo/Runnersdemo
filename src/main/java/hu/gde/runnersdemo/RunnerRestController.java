@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import hu.gde.runnersdemo.RunnerService; 
 
 @RestController
 @RequestMapping("/api/v1/runner")
@@ -71,5 +72,14 @@ public class RunnerRestController {
         public void setLapTimeSeconds(int lapTimeSeconds) {
             this.lapTimeSeconds = lapTimeSeconds;
         }
+    }
+    @GetMapping("/averageage")
+    public double getAverageAge() {
+        List<RunnerEntity> runners = runnerRepository.findAll();
+        double totalAge = 0;
+        for (RunnerEntity runner : runners) {
+            totalAge += runner.getAge();
+        }
+        return (double) totalAge / runners.size();
     }
 }
