@@ -10,7 +10,7 @@ B. A munkafolyamatok átláthatóságának és hatékonyságának javítása
 C. A projektek erőforrásainak maximalizálása
 D. Csak a projektek kezdeti szakaszában való alkalmazás
 
-Válasz:
+Válasz: B
 
 Kérdés 2:
 Melyik állítás igaz a Kanban módszertannal kapcsolatban?
@@ -20,7 +20,7 @@ B. A Kanban módszertan lehetővé teszi a csapatok számára, hogy folyamatosan
 C. A Kanban módszertan csak IT projektekben alkalmazható
 D. A Kanban módszertan szerint minden csapatnak ugyanazokat a munkafolyamatokat kell használnia
 
-Válasz:
+Válasz: B
 
 Kérdés 3:
 Mi a "Work In Progress" (WIP. limit a Kanban módszertanban?
@@ -30,7 +30,7 @@ B. A csapat által egy időben végezhető feladatok minimális száma
 C. Az egyes munkafázisokhoz rendelt időkorlát
 D. A projektenként elkülönített erőforrások maximális száma
 
-Válasz:
+Válasz: A
 
 Kérdés 4:
 Melyik elem NEM része a Kanban táblának?
@@ -40,7 +40,7 @@ B. Munkafázisok
 C. WIP limitek
 D. Ütemterv
 
-Válasz:
+Válasz: D
 
 Kérdés 5:
 Milyen szerepkör nem létezik a Scrum keretrendszerben?
@@ -50,7 +50,7 @@ B. Product Owner
 C. Development Team
 D. Quality Analyst
 
-Válasz:
+Válasz: D
 
 Kérdés 6:
 Mire utal a "User Story" kifejezés az Agile keretrendszerekben?
@@ -60,7 +60,7 @@ B. Egy személyre szabott felhasználói felületre
 C. Egy felhasználói igény leírására
 D. Egy hibajavításra
 
-Válasz:
+Válasz: C
 
 Kérdés 7:
 Melyik az alábbiak közül NEM az Agile Alapelvek között található?
@@ -70,7 +70,7 @@ B. Az együttműködés a folyamatok felett
 C. A rugalmas válaszadás a változásokra
 D. A dokumentáció fontossága minden másnál
 
-Válasz:
+Válasz: D
 
 Kérdés 8:
 Mi az a Kanban módszer?
@@ -80,7 +80,7 @@ B. Egy vizuális menedzsment rendszer
 C. Egy projektmenedzsment módszer
 D. Egy teljesítményértékelési módszer
 
-Válasz:
+Válasz: B
 
 Kérdés 9:
 Melyik az alábbiak közül nem számít Agile módszertannak?
@@ -90,14 +90,14 @@ B. Extreme Programming (XP)
 C. Lean Software Development
 D. Vízesés modell
 
-Válasz:
+Válasz: D
 
 Kérdés 10:
 Mi a "Velocity" az Agile módszertanban?
 
 A. A fejlesztői csapat sebessége
 B. A fejlesztői csapat hatékonysága
-C. A fejlesztői csapat elvégzett munka mennyisége egy időperiódus alatt
+C. A fejlesztői csapat által elvégzett munka mennyisége egy időperiódus alatt
 D. A fejlesztői csapat számbeli létszáma
 
-Válasz:
+Válasz: C
