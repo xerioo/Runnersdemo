@@ -1,0 +1,103 @@
+Név:
+Szak:
+Neptun azonosító:
+
+Kérdés 1:
+Mi a Kanban módszertan alapvető célja?
+
+A. A projektek tervezési fázisának kihagyása
+B. A munkafolyamatok átláthatóságának és hatékonyságának javítása
+C. A projektek erőforrásainak maximalizálása
+D. Csak a projektek kezdeti szakaszában való alkalmazás
+
+Válasz:
+
+Kérdés 2:
+Melyik állítás igaz a Kanban módszertannal kapcsolatban?
+
+A. A Kanban csapatoknak követniük kell egy előre meghatározott, állandó folyamatot
+B. A Kanban módszertan lehetővé teszi a csapatok számára, hogy folyamatosan és rugalmasan javítsák a munkafolyamatokat
+C. A Kanban módszertan csak IT projektekben alkalmazható
+D. A Kanban módszertan szerint minden csapatnak ugyanazokat a munkafolyamatokat kell használnia
+
+Válasz:
+
+Kérdés 3:
+Mi a "Work In Progress" (WIP. limit a Kanban módszertanban?
+
+A. A csapat által párhizamosan elvégzendő feladatok maximális száma
+B. A csapat által egy időben végezhető feladatok minimális száma
+C. Az egyes munkafázisokhoz rendelt időkorlát
+D. A projektenként elkülönített erőforrások maximális száma
+
+Válasz:
+
+Kérdés 4:
+Melyik elem NEM része a Kanban táblának?
+
+A. Feladat kártyák
+B. Munkafázisok
+C. WIP limitek
+D. Ütemterv
+
+Válasz:
+
+Kérdés 5:
+Milyen szerepkör nem létezik a Scrum keretrendszerben?
+
+A. Scrum Master
+B. Product Owner
+C. Development Team
+D. Quality Analyst
+
+Válasz:
+
+Kérdés 6:
+Mire utal a "User Story" kifejezés az Agile keretrendszerekben?
+
+A. Egy részletes dokumentációra
+B. Egy személyre szabott felhasználói felületre
+C. Egy felhasználói igény leírására
+D. Egy hibajavításra
+
+Válasz:
+
+Kérdés 7:
+Melyik az alábbiak közül NEM az Agile Alapelvek között található?
+
+A. Az ügyfelek elégedettsége
+B. Az együttműködés a folyamatok felett
+C. A rugalmas válaszadás a változásokra
+D. A dokumentáció fontossága minden másnál
+
+Válasz:
+
+Kérdés 8:
+Mi az a Kanban módszer?
+
+A. Egy időközönkénti fejlesztési módszer
+B. Egy vizuális menedzsment rendszer
+C. Egy projektmenedzsment módszer
+D. Egy teljesítményértékelési módszer
+
+Válasz:
+
+Kérdés 9:
+Melyik az alábbiak közül nem számít Agile módszertannak?
+
+A. Scrum
+B. Extreme Programming (XP)
+C. Lean Software Development
+D. Vízesés modell
+
+Válasz:
+
+Kérdés 10:
+Mi a "Velocity" az Agile módszertanban?
+
+A. A fejlesztői csapat sebessége
+B. A fejlesztői csapat hatékonysága
+C. A fejlesztői csapat elvégzett munka mennyisége egy időperiódus alatt
+D. A fejlesztői csapat számbeli létszáma
+
+Válasz:
